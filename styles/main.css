@@ -1,3 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+input {
+  margin-left: 50vh;
+}
+
+.do {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  text-align: center;
+  margin-left: 33vw;
+}
+
+input {
+  outline: none;
+  border: 1rem orangered solid;
+  background-color: peru;
+  height: 12vh;
+  width: 33vw;
+  font-size: 1.5rem;
+}
+
+button {
+  height: 4vh;
+  width: 12vw;
+  background-color: #00aeff;
+  margin-left: 29vw;
+}
+
+li {
+  width: 10vw;
+  height: 3rem;
+  max-width: 10vw;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  position: relative;
+  font-size: 1.5rem;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  width: 100vh;
+  flex-direction: column;
+}
 
 /*# sourceMappingURL=main.css.map */
