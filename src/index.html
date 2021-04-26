@@ -5,14 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM</title>
+    <link rel="stylesheet" href="./styles/main.css"/>
   </head>
   <body>
     
-    
+    <div class="do">To do List</div>
     <input type="text" name="userText" id="userData" />
     <button onclick="addToList()">Add</button>
     
     <ul class="result"></ul>
+
+
 
     <script>
         
@@ -23,11 +26,26 @@ const addToList = () => {
     let newLi = document.createElement("li");
     let text = document.createTextNode(userData);
     newLi.appendChild(text);
+    const listitem = document.querySelectorAll("li");
+    listitem.forEach((i)=>{
+        i.style.color = colorGen();
+    });
+    newLi.style.color = colorGen();
     document.querySelector(".result").appendChild(newLi);
     document.querySelector("#userData").value = "";
+  
   } else {
     document.querySelector("#userData").placeholder = "Please Enter text first";
   }
+};
+
+const colorGen = () => {
+  let result = "#";
+  let colorCode = "0123456789ABCDEF";
+  for (let i = 0; i < 6; i++) {
+    result += colorCode[Math.floor(Math.random() * colorCode.length)];
+  }
+  return result;
 };
 
     </script>
