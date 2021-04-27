@@ -14,6 +14,7 @@
     <button onclick="addToList()">Add</button>
     
     <ul class="result"></ul>
+    
 
 
 
@@ -33,6 +34,25 @@ const addToList = () => {
     newLi.style.color = colorGen();
     document.querySelector(".result").appendChild(newLi);
     document.querySelector("#userData").value = "";
+    const newcontainer = document.createElement("div");
+    const donebutton = document.createElement("button");
+    const delbutton = document.createElement("button");
+    donebutton.innerHTML = "✓";
+    delbutton.innerHTML = "✗";
+    newcontainer.appendChild(donebutton);
+    newcontainer.appendChild(delbutton);
+    newLi.appendChild(newcontainer);
+    donebutton.classList.add("done");
+    delbutton.classList.add("del");
+  
+  
+    
+const check = ()=>newLi.classList.toggle("completed");
+const del = ()=> newLi.remove();
+delbutton.addEventListener("click", del);
+donebutton.addEventListener("click", check);
+
+
   
   } else {
     document.querySelector("#userData").placeholder = "Please Enter text first";
@@ -47,7 +67,11 @@ const colorGen = () => {
   }
   return result;
 };
-
+const keycheck = (e)=>{
+    if (e.key == "Enter") addToList();
+};
+const userInput = document.querySelector("#userData");
+userInput.addEventListener("keypress", keycheck);
     </script>
     
   </body>
