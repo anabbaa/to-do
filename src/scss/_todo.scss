@@ -75,6 +75,8 @@ button{
     width: 12vw;
     background-color: rgb(0, 174, 255);
     align-self:flex-end;
+    position: relative;
+    left: 8vw;
     @include responsive (laptop){
       align-self: center;
       position: relative;
