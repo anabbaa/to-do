@@ -1,29 +1,32 @@
-*{
-margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-};
-body {
-  display: flex;
-  align-items: flex-start;
-  justify-content:center;
-
-  width: 100vw;
-  flex-direction: column;
-}
-
 
 .do{
     font-size: 1.5rem;
     font-weight: bolder;
     text-align: center;
-    align-self:flex-end;
-    margin-right: 4vh;
-
-
-    
+   position: relative;
+   left: 22vw;
+  color: white;
+  @include responsive (laptop){
+    left: 28vw;
+  }
+  @include responsive (tab){
+    left: 2vw;
+  }
+  @include responsive (minilaptop){
+    left: 2vw;
+  }
+  @include responsive (mobile){
+    left: -6vw;
+  }
+  @include responsive (minimobile){
+    align-self: start;
+    left: 12vw;
+  }
+  @include responsive (smallmobile){
+    align-self: start;
+    left: 12vw;
+  } 
 }
-
 input{
     outline: none;
     border: 1rem orangered solid;
@@ -33,30 +36,93 @@ input{
     font-size: 1.5rem;
     align-self:flex-end;
     position: relative;
-    left: 16vh;   
-    
+    left: 33vh;  
+    @include responsive (laptop){
+   align-self: center;
+    } 
+    @include responsive (tab){
+      align-self: center;
+      left: 3vw;
+    }
+    @include responsive (minilaptop){
+      align-self: center;
+      left: 2vw;
+    }
+    @include responsive (mobile){
+     align-self: start;
+     width: 66vw;
+    }
+    @include responsive (minimobile){
+      align-self: start;
+      left: 12vw;
+    }
+    @include responsive (smallmobile){
+      align-self: start;
+      left: 12vw;
+    }
+}
+.result{
+  background-color: white;
+  @include responsive (laptop){
+    margin-top: 2vh;
+    align-self: start;
+    position: relative;
+    left: 12vw;
+  }
 }
 button{
     height: 4vh;
     width: 12vw;
     background-color: rgb(0, 174, 255);
     align-self:flex-end;
-
-    
-
+    @include responsive (laptop){
+      align-self: center;
+      position: relative;
+      left: 28vw;
+    }
+    @include responsive (tab){
+      left: 3vw;
+    }
+    @include responsive (minilaptop){
+      left: 2vw;
+    }
+    @include responsive (mobile){
+      align-self: start;
+    }
+    @include responsive (minimobile){
+      align-self: start;
+      left: 12vw;
+      width: 33vw;
+    }
+    @include responsive (smallmobile){
+      align-self: start;
+      left: 12vw;
+    }
 }
 li {
-    width: 30vw;
-    height: 3rem;
-    max-width: 30vw;
+  max-width: 20vw;
+  max-height: 30vh;
+
     word-wrap: break-word;
     overflow-wrap: break-word;
 position: relative;
     font-size: 3rem;
     list-style: none;
     margin: 10% auto;
-    
+    @include responsive (tab){
+      max-width: 40vw;
+      max-height: 60vh;
+    }
+    @include responsive (minilaptop){
 
+      max-width: 40vw;
+      max-height: 60vh;
+    }
+    @include responsive (mobile){
+      max-width: 44vw;
+      max-height: 60vh;
+      font-size: 1rem;
+    }
   }
   li div {
     position: absolute;
@@ -64,10 +130,27 @@ position: relative;
     top: 0;
     display: flex;
     flex-flow: row;
+    @include responsive (laptop){
+      left: 44vw;
+    }
+    @include responsive (mobile){
+      left: 66vw;
+    }
+    @include responsive (minimobile){
+left: 44vw;
+    }
+    @include responsive (smallmobile){
+      left: 55vw;
+    }
   }
   li div button {
     width: 8rem;
     height: 4rem;
+    @include responsive (mobile){
+      width: 2rem;
+      height: 3rem;
+    }
+
   }
   .del {
     color: red;
@@ -77,20 +160,14 @@ position: relative;
     right:  22vw;
   }
   .completed {
-    
     text-shadow: 5px 5px 5px gray;
-  
   }
   .completed::first-letter{
     font-size: 6rem;
     text-transform: to-upper-case($string: "");
-
   }
-  
-  
   .done {
     color: green;
     background-color: burlywood;
     font-size: 1.5rem;
-    
   }
