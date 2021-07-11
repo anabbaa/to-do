@@ -128,12 +128,12 @@ position: relative;
   }
   li div {
     position: absolute;
-    left:  66vw;
+    left:  44vw;
     top: 0;
     display: flex;
     flex-flow: row;
     @include responsive (laptop){
-      left: 44vw;
+      left: 33vw;
     }
     @include responsive (mobile){
       left: 66vw;

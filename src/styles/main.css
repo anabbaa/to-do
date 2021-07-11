@@ -174,14 +174,14 @@ li {
 
 li div {
   position: absolute;
-  left: 66vw;
+  left: 44vw;
   top: 0;
   display: flex;
   flex-flow: row;
 }
 @media only screen and (max-width: 1024px) {
   li div {
-    left: 44vw;
+    left: 33vw;
   }
 }
 @media only screen and (max-width: 500px) {
