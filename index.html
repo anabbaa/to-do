@@ -12,21 +12,18 @@
     <div class="do">To do List</div>
     <input type="text" name="userText" id="userData" />
     <button onclick="addToList()">Add</button>
-    
     <ul class="result"></ul>
     
-
-
-
-    <script>
-        
+    <script> 
 const addToList = () => {
   let userData = document.querySelector("#userData").value;
 
   if (userData != "") {
     let newLi = document.createElement("li");
+    let para = document.createElement("p");
     let text = document.createTextNode(userData);
-    newLi.appendChild(text);
+    para.appendChild(text);
+    newLi.appendChild(para);
     const listitem = document.querySelectorAll("li");
     listitem.forEach((i)=>{
         i.style.color = colorGen();
@@ -37,23 +34,32 @@ const addToList = () => {
     const newcontainer = document.createElement("div");
     const donebutton = document.createElement("button");
     const delbutton = document.createElement("button");
+    const editbutton = document.createElement("button");
     donebutton.innerHTML = "✓";
     delbutton.innerHTML = "✗";
+    editbutton.innerHTML = "Edit"
     newcontainer.appendChild(donebutton);
     newcontainer.appendChild(delbutton);
+    newcontainer.appendChild(editbutton);
     newLi.appendChild(newcontainer);
     donebutton.classList.add("done");
     delbutton.classList.add("del");
-  
-  
-    
+   
 const check = ()=>newLi.classList.toggle("completed");
 const del = ()=> newLi.remove();
+const edit =()=> {
+  newLi.contentEditable= true;
+
+if(true){
+  para.style.color= "white";
+  para.style.backgroundColor = "blue";
+}
+
+}
 delbutton.addEventListener("click", del);
 donebutton.addEventListener("click", check);
+editbutton.addEventListener("click", edit);
 
-
-  
   } else {
     document.querySelector("#userData").placeholder = "Please Enter text first";
   }

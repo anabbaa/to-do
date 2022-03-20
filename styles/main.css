@@ -1,42 +1,7 @@
 .do {
   font-size: 1.5rem;
   font-weight: bolder;
-  text-align: center;
-  position: relative;
-  left: 22vw;
-  color: white;
-}
-@media only screen and (max-width: 1024px) {
-  .do {
-    left: 28vw;
-  }
-}
-@media only screen and (max-width: 700px) {
-  .do {
-    left: 2vw;
-  }
-}
-@media only screen and (max-width: 900px) {
-  .do {
-    left: 2vw;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .do {
-    left: -6vw;
-  }
-}
-@media only screen and (max-width: 279px) {
-  .do {
-    align-self: start;
-    left: 12vw;
-  }
-}
-@media only screen and (max-width: 400px) {
-  .do {
-    align-self: start;
-    left: 12vw;
-  }
+  color: red;
 }
 
 input {
@@ -46,177 +11,53 @@ input {
   height: 12vh;
   width: 33vw;
   font-size: 1.5rem;
-  align-self: flex-end;
-  position: relative;
-  left: 33vh;
-}
-@media only screen and (max-width: 1024px) {
-  input {
-    align-self: center;
-  }
-}
-@media only screen and (max-width: 700px) {
-  input {
-    align-self: center;
-    left: 3vw;
-  }
-}
-@media only screen and (max-width: 900px) {
-  input {
-    align-self: center;
-    left: 2vw;
-  }
-}
-@media only screen and (max-width: 500px) {
-  input {
-    align-self: start;
-    width: 66vw;
-  }
-}
-@media only screen and (max-width: 279px) {
-  input {
-    align-self: start;
-    left: 12vw;
-  }
-}
-@media only screen and (max-width: 400px) {
-  input {
-    align-self: start;
-    left: 12vw;
-  }
-}
-
-.result {
-  background-color: white;
-}
-@media only screen and (max-width: 1024px) {
-  .result {
-    margin-top: 2vh;
-    align-self: start;
-    position: relative;
-    left: 12vw;
-  }
 }
 
 button {
   height: 4vh;
   width: 12vw;
   background-color: #00aeff;
-  align-self: flex-end;
-  position: relative;
-  left: 8vw;
 }
-@media only screen and (max-width: 1024px) {
-  button {
-    align-self: center;
-    position: relative;
-    left: 28vw;
-  }
-}
-@media only screen and (max-width: 700px) {
-  button {
-    left: 3vw;
-  }
-}
-@media only screen and (max-width: 900px) {
-  button {
-    left: 2vw;
-  }
-}
-@media only screen and (max-width: 500px) {
-  button {
-    align-self: start;
-  }
-}
-@media only screen and (max-width: 279px) {
-  button {
-    align-self: start;
-    left: 12vw;
-    width: 33vw;
-  }
-}
-@media only screen and (max-width: 400px) {
-  button {
-    align-self: start;
-    left: 12vw;
-  }
+
+ul {
+  display: flex;
+  flex-direction: column;
 }
 
 li {
-  max-width: 20vw;
+  align-self: flex-start;
+  width: 55vw;
   max-height: 30vh;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  position: relative;
   font-size: 3rem;
   list-style: none;
-  margin: 10% auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
   li {
-    max-width: 40vw;
-    max-height: 60vh;
-  }
-}
-@media only screen and (max-width: 900px) {
-  li {
-    max-width: 40vw;
-    max-height: 60vh;
-  }
-}
-@media only screen and (max-width: 500px) {
-  li {
-    max-width: 44vw;
-    max-height: 60vh;
-    font-size: 1rem;
+    flex-direction: column;
   }
 }
 
 li div {
-  position: absolute;
-  left: 44vw;
-  top: 0;
   display: flex;
-  flex-flow: row;
-}
-@media only screen and (max-width: 1024px) {
-  li div {
-    left: 33vw;
-  }
-}
-@media only screen and (max-width: 500px) {
-  li div {
-    left: 66vw;
-  }
-}
-@media only screen and (max-width: 279px) {
-  li div {
-    left: 44vw;
-  }
-}
-@media only screen and (max-width: 400px) {
-  li div {
-    left: 55vw;
-  }
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 li div button {
   width: 8rem;
   height: 4rem;
 }
-@media only screen and (max-width: 500px) {
-  li div button {
-    width: 2rem;
-    height: 3rem;
-  }
-}
 
 .del {
   color: red;
   background-color: burlywood;
   font-size: 1.5rem;
-  position: relative;
-  right: 22vw;
 }
 
 .completed {
@@ -236,9 +77,9 @@ li div button {
 
 body {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  width: 50vw;
+  width: 100vw;
   background-color: #2c2b31;
   flex-direction: column;
 }
